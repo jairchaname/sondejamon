@@ -267,10 +267,12 @@ img {
   border-radius: 1rem;
   padding: 1rem 0;
   font-size: 1.8rem;
+  width: 95%;
 }
 
 .formulario-contacto textarea {
   height: 20rem;
+  width: 95%;
 }
 
 .formulario-contacto .enviar {
