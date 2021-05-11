@@ -267,7 +267,7 @@ img {
   border-radius: 1rem;
   padding: 1rem 0;
   font-size: 1.8rem;
-  width: min(80%, 100rem);
+  max-width: 95%;
 }
 
 .formulario-contacto textarea {
