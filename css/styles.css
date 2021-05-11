@@ -258,6 +258,7 @@ img {
   font-family: var(--fuenteSecundaria);
   flex: 0 0 8rem;
   font-size: 1.8rem;
+  max-width: 97%;
 }
 
 .formulario-contacto .campo input:not([type="submit"]),
@@ -267,7 +268,7 @@ img {
   border-radius: 1rem;
   padding: 1rem 0;
   font-size: 1.8rem;
-  max-width: 95%;
+  max-width: 97%;
 }
 
 .formulario-contacto textarea {
