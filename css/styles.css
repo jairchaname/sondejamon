@@ -240,7 +240,7 @@ img {
 .formulario-contacto {
   background-color: var(--blanco);
   padding: 5rem;
-  /* flex: 0 0 calc(83.3% - 1rem); */
+  flex: 0 0 calc(83.3% - 1rem);
 }
 
 .formulario-contacto .campo {
