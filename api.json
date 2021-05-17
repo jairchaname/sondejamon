@@ -1,0 +1,22 @@
+[
+    {
+        "nombre": "hamburguesa",
+        "id": "1",
+        "precio": 4.00,
+        "imagen": "productos/pan-1.jpg"
+    },
+
+    {
+        "nombre": "Sanguche",
+        "id": "2",
+        "precio": 5.00,
+        "imagen": "productos/pan-1.jpg"
+    },
+
+    {
+        "nombre": "Gaseosa",
+        "id": "3",
+        "precio": 3.00,
+        "imagen": "productos/pan-1.jpg"
+    }
+]
