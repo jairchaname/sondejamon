@@ -24,98 +24,27 @@
         </div>
     </header>
 
-    <div class="contenedor">
+    <div id="paso-1" class="contenedor">
         <h2>Realizar Pedido</h2>
+        <div id="productos" class="listado-productos"></div>  
+    </div>
 
-        <div class="productos">
+    <div id="paso-2" class="contenedor">
+        <h2>Escoger Cremas</h2>
+    </div>
 
-            <div class="producto">
-                <img src="productos/pan-1.png" alt="Imagén Producto">
-                <div class="producto-contenido">
-                    <h4>Sanguche de Jamón</h4>
-                    <p>Precio: <span>S/4.00</span></p>
-                    <div class="cantidad">
-                        <div class="icono hover" id="disminuir">
-                            <i class="fas fa-minus"></i>
-                        </div>
-                        <p id="cantidades" value="0">0</p>
-                        <div class="icono hover" id="aumentar">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                </div>
-            </div><!--Fin .producto-->
+    <div id="paso-3" class="contenedor">
+        <h2>Monto a pagar</h2>
+    </div>
 
-            <div class="producto">
-                <img src="productos/pan-2.png" alt="Imagén Producto">
-                <div class="producto-contenido">
-                    <h4>Sanguche de Jamón</h4>
-                    <p>Precio: <span>S/4.00</span></p>
-                    <div class="cantidad">
-                        <div class="icono hover" id="disminuir">
-                            <i class="fas fa-minus"></i>
-                        </div>
-                        <p id="cantidades">0</p>
-                        <div class="icono hover" id="aumentar">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                </div>
-            </div><!--Fin .producto-->
-            
-            <div class="producto">
-                <img src="productos/pan-1.png" alt="Imagén Producto">
-                <div class="producto-contenido">
-                    <h4>Sanguche de Jamón</h4>
-                    <p>Precio: <span>S/4.00</span></p>
-                    <div class="cantidad">
-                        <div class="icono hover">
-                            <i class="fas fa-minus"></i>
-                        </div>
-                        <p>1</p>
-                        <div class="icono hover">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                </div>
-            </div><!--Fin .producto-->
+    <div class="paginacion contenedor">
+        <button id="anterior" class="hover">
+            &laquo; Anterior
+        </button>
 
-            <div class="producto">
-                <img src="productos/pan-1.png" alt="Imagén Producto">
-                <div class="producto-contenido">
-                    <h4>Sanguche de Jamón</h4>
-                    <p>Precio: <span>S/4.00</span></p>
-                    <div class="cantidad">
-                        <div class="icono hover">
-                            <i class="fas fa-minus"></i>
-                        </div>
-                        <p>1</p>
-                        <div class="icono hover">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                </div>
-            </div><!--Fin .producto-->
-
-            <div class="producto">
-                <img src="productos/pan-1.png" alt="Imagén Producto">
-                <div class="producto-contenido">
-                    <h4>Sanguche de Jamón</h4>
-                    <p>Precio: <span>S/4.00</span></p>
-                    <div class="cantidad">
-                        <div class="icono hover">
-                            <i class="fas fa-minus"></i>
-                        </div>
-                        <p>1</p>
-                        <div class="icono hover">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                </div>
-            </div><!--Fin .producto-->
-            
-
-        </div> 
+        <button id="siguiente" class="hover">
+            Siguiente &raquo;
+        </button>
     </div>
 
 
@@ -128,3 +57,20 @@
     <script src="app.js"></script>
 </body>
 </html>
+
+<!-- <img src="productos/pan-1.png" alt="Imagén Producto">
+<div class="producto-contenido">
+    <h4 class="nombre-producto">Sanguche de Jamón</h4>
+    <p>Precio: <span>S/4.00</span></p>
+    <div class="cantidad">
+        <div class="icono hover disminuir">
+            <i class="fas fa-minus"></i>
+        </div>
+        <p class="cantidades" value="0">0</p>
+        <div class="icono hover aumentar">
+            <i class="fas fa-plus"></i>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="producto"></div> --><!--Fin .producto-->
