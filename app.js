@@ -1,9 +1,6 @@
-/* let pagina = 1;
+let pagina = 1;
 
-const producto = {
-    nombre: '',
-    productos: []
-} */
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -12,8 +9,67 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function iniciarApp() {
     mostrarProductos();
+
+    //Resalta el Div actual segun el tab al que se presiona
+    mostrarSeccion();
+
+    //Oculta o muestra una sección según el tab al que se presiona
+    cambiarSeccion();
+
+    //Paginación siguiente y anterior
+    paginaSiguiente();
+
+    paginaAnterior();
+
+    //Comprueba la página actual para ocultar o mostrar la paginación
+    botonesPaginador();
+
 }
 
+function mostrarSeccion() {
+
+    //Eliminar mostrar-seccion de la sección anterior
+    const seccionAnterior = document.querySelector('.mostrar-seccion');
+
+    if (seccionAnterior) {
+        seccionAnterior.classList.remove('mostrar-seccion');
+    }
+    
+
+    const seccionActual = document.querySelector(`#paso-${pagina}`);
+    seccionActual.classList.add('mostrar-seccion');
+
+    //Eliminar .actual de la sección anterior
+    const tabAnterior =  document.querySelector('.tabs .actual');
+
+    if (tabAnterior) {
+        tabAnterior.classList.remove('actual');
+    }
+   
+
+    //Resalta el tab actual
+    const tab = document.querySelector(`[data-paso="${pagina}"]`);
+    tab.classList.add('actual');
+}
+
+function cambiarSeccion() {
+    const enlaces = document.querySelectorAll('.tabs button');
+
+    enlaces.forEach( enlace => {
+        enlace.addEventListener('click', e => {
+            e.preventDefault();
+            pagina = parseInt(e.target.dataset.paso);
+
+            // Llamar la función de mostrarSeccion()
+            mostrarSeccion();
+
+            botonesPaginador();
+        })
+    })
+}
+
+
+//Mostrar Productos seccion productos
 async function mostrarProductos() {
     try {
         const resultado = await fetch('./api.json');
@@ -109,35 +165,49 @@ async function mostrarProductos() {
     }
 }
 
+function paginaSiguiente() {
+   const paginaSiguiente = document.querySelector('#siguiente');
+   paginaSiguiente.addEventListener('click', e => {
+       pagina++
+
+       console.log(pagina);
+
+       botonesPaginador();
+   })
+}
+
+function paginaAnterior() {
+    const paginaAnterior = document.querySelector('#anterior');
+    paginaAnterior.addEventListener('click', e => {
+        pagina--;
+
+        console.log(pagina);
+
+        botonesPaginador();
+    })
+}
+
+function botonesPaginador() {
+    const paginaSiguiente = document.querySelector('#siguiente');
+    const paginaAnterior = document.querySelector('#anterior');
+
+    if(pagina === 1) {
+        paginaAnterior.classList.add('ocultar');
+        paginaSiguiente.classList.remove('ocultar');
+    } else if (pagina === 4) {
+        paginaSiguiente.classList.add('ocultar');
+        paginaAnterior.classList.remove('ocultar');
+    } else {
+        paginaSiguiente.classList.remove('ocultar');
+        paginaAnterior.classList.remove('ocultar');
+    }
+
+    mostrarSeccion(); // Cambia la sección que se muestra
+}
+
 
 //Aumentar y disminuir cantidades de Productos
-const cantidadesProductos = document.querySelector('.cantidades');
+const cantidadProductos = document.querySelector('.cantidades');
 const aumentarProductos = document.querySelector('.aumentar');
 const disminuirProductos = document.querySelector('.disminuir');
 
-
-
-
-/* const cantidades = document.querySelectorAll(".cantidades");
-function sumar() {
-    cantidades.firstChild.nodeValue = ++cantidad;
-}
-
-const aumentar = document.querySelectorAll(".aumentar");
-aumentar.addEventListener("click", sumar, false)
-
-function restar() {
-    cantidades.firstChild.nodeValue = --cantidad;
-}
-
-const disminuir = document.querySelectorAll('.disminuir');
-disminuir.addEventListener('click', restar, false)
- */
-
-/* 
-//añadir clase
-if(cantidades <= 0) {
-    cantidades.classList('cero')
-} 
-
-const requireURL = '' */

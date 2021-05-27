@@ -23,28 +23,40 @@
             </div>
         </div>
     </header>
+    <div class="contenedor">
 
-    <div id="paso-1" class="contenedor">
-        <h2>Realizar Pedido</h2>
-        <div id="productos" class="listado-productos"></div>  
-    </div>
+        <nav class="tabs">
+            <button class="hover" type="button" data-paso="1">Productos</button>
+            <button class="hover" type="button" data-paso="2">Cremas</button>
+            <button class="hover" type="button" data-paso="3">Datos</button>
+            <button class="hover" type="button" data-paso="4">Pagar</button>
+        </nav>
+        <div id="paso-1" class="seccion">
+            <h2>Realizar Pedido</h2>
+            <div id="productos" class="listado-productos"></div>  
+        </div>
 
-    <div id="paso-2" class="contenedor">
-        <h2>Escoger Cremas</h2>
-    </div>
+        <div id="paso-2" class="seccion">
+            <h2>Escoger Cremas</h2>
+        </div>
 
-    <div id="paso-3" class="contenedor">
-        <h2>Monto a pagar</h2>
-    </div>
+        <div id="paso-3" class="seccion">
+            <h2>Datos de Comprador</h2>
+        </div>
 
-    <div class="paginacion contenedor">
-        <button id="anterior" class="hover">
-            &laquo; Anterior
-        </button>
+        <div id="paso-4" class="seccion">
+            <h2>Monto a pagar</h2>
+        </div>
 
-        <button id="siguiente" class="hover">
-            Siguiente &raquo;
-        </button>
+        <div class="paginacion">
+            <button id="anterior" class="hover">
+                &laquo; Anterior
+            </button>
+
+            <button id="siguiente" class="hover">
+                Siguiente &raquo;
+            </button>
+        </div>
     </div>
 
 
